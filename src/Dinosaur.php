@@ -1,5 +1,5 @@
 <?php
-class Dinosaur{
+abstract class Dinosaur{
 
     private string $name;
     private string $gender;
@@ -31,17 +31,7 @@ class Dinosaur{
         return $this->gender === self::GENDER_FEMALE;
     }
 
-    public function roar(): string{
-        if (!$this->isAdult()){
-            return 'roar..';
-        }else{
-            if ($this->isMale()) {
-                return 'ROOOAAAAAAR!!!!';
-            }elseif($this->isFemale()){
-                return 'GGGGGGRRRROOOOAAAAARRRRRR!!!!';
-            }
-        }
-
-    }
+    public abstract function roar(): string;
+    public abstract function getRace(): string;
 
 }
