@@ -1,16 +1,14 @@
 <?php
 
-require_once('../src/Dinosaur.php');
-require_once('../src/Tyrannosaurus.php');
-require_once('../src/Triceratops.php');
-require_once('../src/Pterodactyl.php');
-require_once('../src/Spinosaurus.php');
+use KNPLabs\Real\Dinosaur;
+
+include('../src/autoloader.php');
 
 
-$denver = new Triceratops('Denver', 'Male', 8);
-$rex = new Spinosaurus('Rex', 'Male', 23);
-$paula = new Tyrannosaurus('Paula', 'Female', 46);
-$bob = new Pterodactyl('bob', 'Male', 6);
+$denver = new Dinosaur\Triceratops('Denver', 'Male', 8);
+$rex = new Dinosaur\Spinosaurus('Rex', 'Male', 23);
+$paula = new Dinosaur\Tyrannosaurus('Paula', 'Female', 46);
+$bob = new Dinosaur\Pterodactyl('bob', 'Male', 6);
 
 ?>
 

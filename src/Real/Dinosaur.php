@@ -1,4 +1,7 @@
 <?php
+
+namespace KNPLabs\Real;
+
 abstract class Dinosaur{
 
     private string $name;
@@ -10,7 +13,7 @@ abstract class Dinosaur{
 
     public function __construct (string $name, string $gender, int $age){
         if (!in_array($gender, [self::GENDER_FEMALE, self::GENDER_MALE])) {
-            throw new Exception("Wrong gender");
+            throw new \Exception("Wrong gender");
         }
         $this->name = $name;
         $this->gender = $gender;

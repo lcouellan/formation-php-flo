@@ -1,6 +1,8 @@
 <?php
-require_once('../src/FlyingDinosaur.php');
-require_once('../src/LandDinosaur.php');
+
+namespace KNPLabs\Real\Dinosaur;
+
+use KNPLabs\Real\Dinosaur;
 
 class Pterodactyl extends Dinosaur implements LandDinosaur,FlyingDinosaur{
 
