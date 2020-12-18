@@ -36,4 +36,14 @@ class FakeDinosaursProvider implements DinosaursProvider
     {
         return $this->dinosaurs;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function searchByName(string $name): array
+    {
+        return array_filter($this->dinosaurs, function ($dinosaur) use ($name) {
+            return 1 === preg_match('/'. $name . '/', $dinosaur->getName());
+        });
+    }
 }

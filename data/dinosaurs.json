@@ -1,0 +1,6 @@
+[
+  {"name":"Callie", "gender":"Female", "age":34, "race":"Tyrannosaurus"},
+  {"name":"Sebastian", "gender":"Male", "age":25, "race":"Triceratops"},
+  {"name":"Natalia", "gender":"Female", "age":3, "race":"Pterodactyl"},
+  {"name":"Dakota", "gender":"Male", "age":37, "race":"Pterodactyl"}
+]
