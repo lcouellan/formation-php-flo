@@ -1,6 +1,9 @@
 <?php
-require_once('../src/LandDinosaur.php');
-require_once('../src/SeaDinosaur.php');
+
+namespace KNPLabs\Real\Dinosaur;
+
+use KNPLabs\Real\Dinosaur;
+
 class Spinosaurus extends Dinosaur implements LandDinosaur,SeaDinosaur{
 
 private const DINO_GENRE = 'Spinosaurus';

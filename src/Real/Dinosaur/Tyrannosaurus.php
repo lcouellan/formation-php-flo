@@ -1,5 +1,9 @@
 <?php
-require_once('../src/LandDinosaur.php');
+
+namespace KNPLabs\Real\Dinosaur;
+
+use KNPLabs\Real\Dinosaur;
+
 class Tyrannosaurus extends Dinosaur implements LandDinosaur{
 
 private const DINO_GENRE = 'Tyrannosaurus';
