@@ -8,8 +8,9 @@ abstract class Dinosaur{
     private string $gender;
     private int $age;
     private const MAJOR_AGE = 21;
-    private const GENDER_FEMALE = 'Female';
-    private const GENDER_MALE = 'Male';
+    public const GENDER_FEMALE = 'Female';
+    public const GENDER_MALE = 'Male';
+    public const MAX_AGE = 60;
 
     public function __construct (string $name, string $gender, int $age){
         if (!in_array($gender, [self::GENDER_FEMALE, self::GENDER_MALE])) {
