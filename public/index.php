@@ -3,11 +3,11 @@
 include('../vendor/autoload.php');
 
 use KNPLabs\Controller\ListDinosaurs;
-use KNPLabs\Real\FakeProvider\FakeDinosaursProvider;
+use KNPLabs\Real\FileProvider\FileDinosaursProvider;
 use KNPLabs\Routing\NotFoundException;
 use KNPLabs\Routing\Router;
 
-$dinosaursProvider = new FakeDinosaursProvider();
+$dinosaursProvider = new FileDinosaursProvider("../data/dinosaurs.json");
 
 try {
     $router = new Router();

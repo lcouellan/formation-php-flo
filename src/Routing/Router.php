@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace KNPLabs\Routing;
 
@@ -31,8 +31,9 @@ class Router
 
     public function handleRequest(): void
     {
+        $currentRoute = explode('?', $this->currentURL)[0];
         foreach ($this->controllers as $route => $controller) {
-            if ($this->currentURL === $route) {
+            if ($currentRoute === $route) {
                 $controller->handleRequest();
 
                 return;
