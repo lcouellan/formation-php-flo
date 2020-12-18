@@ -1,0 +1,12 @@
+{
+    "name": "knplabs/dinosaurs",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "KNPLabs\\": "src"
+        }
+    },
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    }
+}
