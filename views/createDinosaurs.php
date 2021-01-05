@@ -26,16 +26,21 @@
     </nav>
     <div class="container">
       <div class="row">
-        <?php foreach ($dinosaurs as $dinosaur) : ?>
-        <div class="card" style="width: 18rem; margin: 0.6rem;">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $dinosaur->getName(); ?></h5>
-            <h6 class="card-subtitle text-muted mb-2"><?php echo $dinosaur->isAdult() ? 'Adult' : 'Baby' ?> <?php echo $dinosaur->getRace(); ?></h6>
-            <p class="card-text"><?php echo $dinosaur->roar(); ?></p>
-          </div>
-        </div>
-        <?php endforeach; ?>
-        <?php echo empty($dinosaurs) ? 'No dinos' : ''?>
+            <form action="" method="post">
+
+            <input type="text" name="name" id="name" placeholder="name" class="form-control mr-sm-2" required>
+            <input type="number" name="age" id="age" placeholder="age" class="form-control mr-sm-2" required>
+            <select name="gender" id="gender">
+                <option value="Male" default>Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <select name="race" id="race">
+                <option value="Pterodactyl" selected>Pterodactyl</option>
+                <option value="Triceratops">Triceratops</option>
+                <option value="Tyrannosaurus">Tyrannosaurus</option>
+            </select>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+            </form>
       </div>
     </div>
   </body>

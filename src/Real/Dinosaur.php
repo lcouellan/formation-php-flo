@@ -34,7 +34,16 @@ abstract class Dinosaur{
     public function isFemale(): bool{
         return $this->gender === self::GENDER_FEMALE;
     }
+    public function toArray(): array{
+        $rawDino = [
+            "name"=>$this->name,
+            "gender"=>$this->gender,
+            "age"=>$this->age,
+            "race"=>$this->getRace(),
 
+        ];
+        return $rawDino;
+    }
     public abstract function roar(): string;
     public abstract function getRace(): string;
 
