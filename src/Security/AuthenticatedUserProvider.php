@@ -1,7 +1,7 @@
 <?php
  
  namespace KNPLabs\Security;
-  
+
  use KNPLabs\Real\Provider\UserProvider;
  use KNPLabs\Real\User;
   

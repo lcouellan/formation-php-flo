@@ -22,10 +22,10 @@ class FakeDinosaursProvider implements DinosaursProvider
         $faker  = Factory::create();
         $faker->seed(1234);
         $this->dinosaurs=[
-        new Triceratops($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1,Dinosaur::MAX_AGE)),
-        new Spinosaurus($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1,Dinosaur::MAX_AGE)),
-        new Tyrannosaurus($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1,Dinosaur::MAX_AGE)),
-        new Pterodactyl($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1,Dinosaur::MAX_AGE))
+        new Triceratops($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1, Dinosaur::MAX_AGE)),
+        new Spinosaurus($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1, Dinosaur::MAX_AGE)),
+        new Tyrannosaurus($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1, Dinosaur::MAX_AGE)),
+        new Pterodactyl($faker->firstName(), $faker->randomElement([Dinosaur::GENDER_FEMALE,Dinosaur::GENDER_MALE]), $faker->numberBetween(1, Dinosaur::MAX_AGE))
         ];
     }
 

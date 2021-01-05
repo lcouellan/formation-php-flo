@@ -17,11 +17,11 @@ class FileUserProvider implements UserProvider
         $jsonUsers = file_get_contents($filePath);
         $jsonDecodedUsers = json_decode($jsonUsers, true);
         foreach ($jsonDecodedUsers as $user) {
-                try {
-                        $this->users[] = new User($user['firstName'],$user['lastName'],$user['email'],$user['password']);
-                }catch (\InvalidArgumentException $e){
-                    throw new \Exception("Error Processing Users json file", 1);
-                }
+            try {
+                $this->users[] = new User($user['firstName'], $user['lastName'], $user['email'], $user['password']);
+            } catch (\InvalidArgumentException $e) {
+                throw new \Exception("Error Processing Users json file", 1);
+            }
         }
     }
 
@@ -39,7 +39,7 @@ class FileUserProvider implements UserProvider
     public function findByEmail(string $email): ?User
     {
         $users = $this->all();
-        foreach($users as $user){
+        foreach ($users as $user) {
             if ($email === $user->getEmail()) {
                 return $user;
             }
