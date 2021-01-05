@@ -28,21 +28,22 @@
           <input type="search" name="q" value="<?php echo $q; ?>" placeholder="Search" class="form-control mr-sm-2" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        
       </div>
     </nav>
-    <div class="container">
+    <div class="container"> 
+    <div class="row">
+        <span><?php if (isset($authenticatedUser)){
+            echo  $authenticatedUser->getFirstName();
+        }
+            ?></span>
+        <span></span>
+      </div>
       <div class="row">
-        <?php foreach ($dinosaurs as $dinosaur) : ?>
-        <div class="card" style="width: 18rem; margin: 0.6rem;">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $dinosaur->getName(); ?></h5>
-            <h6 class="card-subtitle text-muted mb-2"><?php echo $dinosaur->isAdult() ? 'Adult' : 'Baby' ?> <?php echo $dinosaur->getRace(); ?></h6>
-            <p class="card-text"><?php echo $dinosaur->roar(); ?></p>
-          </div>
-        </div>
-        <?php endforeach; ?>
-        <?php echo empty($dinosaurs) ? 'No dinos' : ''?>
+            <form action="" method="post">
+                <input type="email" name="email" id="email" placeholder="email" class="form-control mr-sm-2" required>
+                <input type="password" name="password" id="password" placeholder="password" class="form-control mr-sm-2" required>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+            </form>
       </div>
     </div>
   </body>
