@@ -17,6 +17,12 @@
           <li class="nav-item active">
             <a class="nav-link" href="/create">Create<span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item active pull-right">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item active pull-right">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
         </ul>
         <form method="GET" action="http://localhost/" class="form-inline my-2 my-lg-0 pull-right">
           <input type="search" name="q" value="<?php echo $q; ?>" placeholder="Search" class="form-control mr-sm-2" aria-label="Search">
