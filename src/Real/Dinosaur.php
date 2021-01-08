@@ -39,6 +39,9 @@ abstract class Dinosaur
     {
         return $this->gender === self::GENDER_FEMALE;
     }
+    /**
+    * @return array<mixed>
+    */
     public function toArray(): array
     {
         $rawDino = [

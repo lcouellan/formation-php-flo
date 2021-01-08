@@ -41,7 +41,6 @@ class CreateDinosaurs implements Controller
 
                 default:
                     throw new \Exception("Error in submited race", 1);
-                    break;
             }
             $this->dinosaursPersister->save($newDinosaur);
             

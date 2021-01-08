@@ -21,6 +21,7 @@ class ListDinosaurs implements Controller
 
             $dinosaurs = $this->dinosaursProvider->searchByName($q);
         } else {
+            $q = null;
             $dinosaurs = $this->dinosaursProvider->all();
         }
 

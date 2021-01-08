@@ -37,7 +37,9 @@ class User
     {
         return $this->password;
     }
-
+    /**
+    * @return array<mixed>
+    */
     public function toArray(): array
     {
         $rawUser = [

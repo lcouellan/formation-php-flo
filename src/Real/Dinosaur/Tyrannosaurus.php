@@ -15,7 +15,7 @@ class Tyrannosaurus extends Dinosaur implements LandDinosaur
         } else {
             if ($this->isMale()) {
                 return 'ROOOAAAAAAR!!!!';
-            } elseif ($this->isFemale()) {
+            } else {
                 return 'GGGGGGRRRROOOOAAAAARRRRRR!!!!';
             }
         }

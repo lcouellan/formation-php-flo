@@ -33,7 +33,6 @@ class FileDinosaursProvider implements DinosaursProvider
 
                 default:
                     throw new \Exception("Error Processing Dinos json file", 1);
-                    break;
             }
         }
     }
