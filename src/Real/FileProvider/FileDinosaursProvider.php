@@ -22,18 +22,17 @@ class FileDinosaursProvider implements DinosaursProvider
         foreach ($jsonDecodedDinosaurs as $dino) {
             switch ($dino['race']) {
                 case 'Tyrannosaurus':
-                    $this->dinosaurs[] = new Tyrannosaurus($dino['name'],$dino['gender'],$dino['age']);
+                    $this->dinosaurs[] = new Tyrannosaurus($dino['name'], $dino['gender'], $dino['age']);
                     break;
                 case 'Triceratops':
-                    $this->dinosaurs[] = new Triceratops($dino['name'],$dino['gender'],$dino['age']);
+                    $this->dinosaurs[] = new Triceratops($dino['name'], $dino['gender'], $dino['age']);
                     break;
                 case 'Pterodactyl':
-                    $this->dinosaurs[] = new Pterodactyl($dino['name'],$dino['gender'],$dino['age']);
+                    $this->dinosaurs[] = new Pterodactyl($dino['name'], $dino['gender'], $dino['age']);
                     break;
 
                 default:
                     throw new \Exception("Error Processing Dinos json file", 1);
-                    break;
             }
         }
     }

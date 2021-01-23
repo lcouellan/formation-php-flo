@@ -8,5 +8,8 @@
     },
     "require": {
         "fzaninotto/faker": "^1.9"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.64"
     }
 }

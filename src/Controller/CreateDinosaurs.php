@@ -25,24 +25,22 @@ class CreateDinosaurs implements Controller
                 $race = $_POST['race'];
                 $gender = $_POST['gender'];
                 $age = $_POST['age'];
-            }
-            else {
+            } else {
                 throw new \Exception("Error in submitted datas", 1);
             }
             switch ($race) {
                 case 'Tyrannosaurus':
-                    $newDinosaur = new Tyrannosaurus($name,$gender,$age);
+                    $newDinosaur = new Tyrannosaurus($name, $gender, $age);
                     break;
                 case 'Triceratops':
-                    $newDinosaur = new Triceratops($name,$gender,$age);
+                    $newDinosaur = new Triceratops($name, $gender, $age);
                     break;
                 case 'Pterodactyl':
-                    $newDinosaur = new Pterodactyl($name,$gender,$age);
+                    $newDinosaur = new Pterodactyl($name, $gender, $age);
                     break;
 
                 default:
                     throw new \Exception("Error in submited race", 1);
-                    break;
             }
             $this->dinosaursPersister->save($newDinosaur);
             

@@ -8,19 +8,17 @@ use KNPLabs\Security\AuthenticatedUserProvider;
 
 class Logout implements Controller
 {
-
     public function __construct()
     {
-
     }
 
     public function handleRequest(): void
     {
-       session_start();
-       session_destroy();
+        session_start();
+        session_destroy();
 
-       header('Location: http://localhost/login');
+        header('Location: http://localhost/login');
        
-       return;
+        return;
     }
 }

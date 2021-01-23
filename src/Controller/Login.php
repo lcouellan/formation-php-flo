@@ -23,17 +23,15 @@ class Login implements Controller
         if (!empty($_POST)) {
             $email = isset($_POST['email']) ? $_POST['email'] : null;
             $password = isset($_POST['password']) ? $_POST['password'] : null;
-            if ($email === null){
+            if ($email === null) {
                 ViewRenderer::render('displayLogin.php');
             }
             $user = $this->userProvider->findByEmail($email);
-            if ($user === null){
+            if ($user === null) {
                 throw new \Exception("No user found", 1);
-                
             }
-            if($user->getPassword() !== $password){
+            if ($user->getPassword() !== $password) {
                 throw new \Exception("Wrong pw", 1);
-                
             }
             session_start();
 
@@ -44,6 +42,6 @@ class Login implements Controller
             return;
         }
 
-        ViewRenderer::render('displayLogin.php',['authenticatedUser' => $authenticatedUser]);
+        ViewRenderer::render('displayLogin.php', ['authenticatedUser' => $authenticatedUser]);
     }
 }

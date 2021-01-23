@@ -12,7 +12,7 @@ interface UserProvider
     public function all(): array;
 
     /**
-     * @return array<User>
+     * @return User
      */
     public function findByEmail(string $email): ?User;
 }

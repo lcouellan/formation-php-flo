@@ -2,6 +2,8 @@
 
 namespace KNPLabs\Real\Provider;
 
+use KNPLabs\Real\Dinosaur;
+
 interface DinosaursProvider
 {
     /**
